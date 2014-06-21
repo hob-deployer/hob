@@ -7,6 +7,7 @@ module Hob
     # Paths to main deployment folders
     #
     class Paths
+
       ##
       # Root folder
       #
@@ -42,6 +43,12 @@ module Hob
 
     private
 
+      ##
+      # Constructor:
+      #
+      # Params:
+      # - root_path {Pathname} path to deployment root directory
+      #
       def initialize(root_path)
         @root    = root_path
         @apps    = root_path.join('apps')

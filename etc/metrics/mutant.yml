@@ -1,0 +1,4 @@
+min_score: 100
+include:
+  - Hob::World*
+  - Hob::Application*

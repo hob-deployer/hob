@@ -34,9 +34,17 @@ module Hob
 
   private
 
+    ##
+    # Constructor: initialize world
+    #
+    # Params:
+    # - root_path {Pathname} path to deployment root directory
+    #
     def initialize(root_path)
       @root  = root_path
-      @paths = Paths.new(root)
+      @paths = Paths.new(root_path)
+
+      freeze
     end
   end
 end
