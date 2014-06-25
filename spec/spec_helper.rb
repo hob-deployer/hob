@@ -10,8 +10,14 @@ require 'pry'
 require 'hob'
 
 class Specs
-  def self.root
-    Pathname(__FILE__).dirname
+  class << self
+    def root
+      Pathname(__FILE__).dirname
+    end
+
+    def fixtures
+      root.join('fixtures')
+    end
   end
 end
 

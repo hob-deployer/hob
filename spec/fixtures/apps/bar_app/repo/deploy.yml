@@ -1,0 +1,11 @@
+---
+recipes:
+  - git
+  - nginx:
+      host: spreel.com
+      port: 80
+events:
+  on_checkout: git submodule update
+  on_restart:
+    - rake services:restart
+    - <%= 'resque work' %>

@@ -1,4 +1,5 @@
 require 'pathname'
+require 'yaml'
 
 require 'hob/version'
 require 'hob/world'

@@ -1,4 +1,5 @@
 require 'hob/application/paths'
+require 'hob/application/config'
 
 module Hob
   ##
@@ -26,6 +27,15 @@ module Hob
     # Returns: {Hob::Application::Paths}
     #
     attr_reader :paths
+
+    ##
+    # Application configuration
+    #
+    # Returns: {Hob::Application::Config}
+    #
+    def config
+      Config.new(paths.repo)
+    end
 
   private
 
